@@ -1,233 +1,277 @@
-// Next.js single-file starter (pages/index.jsx)
-// Default export: Home component
-// Tailwind CSS utility classes are used. This file is a starting point — split into components when ready.
-
-import React from 'react'
-
-const experiences = [
-  {
-    company: 'PT Beurer Indonesia Technology (SEZ Kendal)',
-    role: 'Operations & Supply Chain Manager',
-    period: 'Aug 2024 — Jul 2025',
-    bullets: [
-      'Directed end-to-end SEZ logistics strategy (import-export, bonded warehousing, procurement, 3PL).',
-      'Governed customs & SEZ compliance (BC2.5–BC4.0, INSW, PPKEK, PJKEK).',
-      'Established SOP, KPI frameworks, and continuous improvement initiatives.'
-    ]
-  },
-  {
-    company: 'PT LBM Energi Baru Indonesia (SEZ Kendal)',
-    role: 'Logistic Manager',
-    period: 'Jun 2023 — Aug 2024',
-    bullets: [
-      'Led procurement & SEZ logistics alignment to optimize tax exposure.',
-      'Implemented supplier performance metrics and inventory optimization.'
-    ]
-  },
-  {
-    company: 'PT Taka Turbomachinery Indonesia (Contract Project)',
-    role: 'Productions & Logistic Manager',
-    period: 'Nov 2021 — Jun 2022',
-    bullets: [
-      'Managed export-import and heavy cargo compliance for project deliveries.'
-    ]
-  },
-  // add more experiences...
-]
-
-const skills = [
-  'SEZ & Bonded Zone Compliance',
-  'Customs Clearance (INSW, Ceisa)',
-  'Procurement & Supplier Management',
-  'Warehouse Optimization',
-  'ERP: Odoo, SAP',
-  'Budgeting & Import TAX Calculation'
-]
-
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
-      {/* HERO / LANDING */}
-      <header className="relative overflow-hidden bg-gradient-to-r from-sky-800 via-sky-700 to-slate-800 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-extrabold">Dodi Hariyanto</h1>
-            <p className="mt-4 text-lg md:text-xl max-w-2xl leading-relaxed">Operations & Supply Chain Manager — 15+ years driving procurement, SEZ logistics, warehousing, and trade compliance across energy, medical devices, and manufacturing.</p>
-            <div className="mt-6 flex gap-4">
-              <a href="#portfolio" className="inline-block bg-white text-slate-900 px-5 py-2 rounded shadow-md">Explore my work</a>
-              <a href="/Resume_Dodi_Hariyanto.pdf" download className="inline-block border border-white px-5 py-2 rounded">Download CV</a>
-            </div>
-          </div>
-          <div className="w-full md:w-1/3">
-            {/* Placeholder for profile card with animated supply-chain mini graphic */}
-            <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/10">
-              <div className="h-48 flex items-center justify-center">[Animated supply-chain video placeholder]</div>
-              <p className="mt-4 text-sm">Senior Executive Logistics — SEZ Specialist — Trade Compliance</p>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dodi Hariyanto — Operations & Supply Chain Leader</title>
+    <meta
+      name="description"
+      content="Portfolio of Dodi Hariyanto, an Operations & Supply Chain Manager specializing in SEZ logistics, customs compliance, and procurement optimization."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+      }
+      .bg-gradient-supply {
+        background: linear-gradient(135deg, #075985, #0f172a 80%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <header class="bg-gradient-supply text-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 md:flex-row md:items-center">
+        <div class="flex-1">
+          <p class="text-sm uppercase tracking-widest text-sky-200">Operations &amp; Supply Chain Manager</p>
+          <h1 class="mt-2 text-4xl font-extrabold md:text-5xl">Dodi Hariyanto</h1>
+          <p class="mt-4 max-w-2xl text-lg leading-relaxed text-sky-100 md:text-xl">
+            Driving procurement, SEZ logistics, warehousing, and trade compliance across energy, medical devices, and manufacturing sectors with
+            15+ years of hands-on leadership.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-4 text-sm font-medium">
+            <a
+              class="inline-flex items-center rounded bg-white px-5 py-2 text-slate-900 shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
+              href="#portfolio"
+            >
+              Explore my work
+            </a>
+            <a
+              class="inline-flex items-center rounded border border-white px-5 py-2 text-white transition hover:bg-white/10"
+              href="/Resume_Dodi_Hariyanto.pdf"
+              download
+            >
+              Download CV
+            </a>
           </div>
         </div>
-      </header>
+        <div class="w-full md:w-1/3">
+          <div class="rounded-xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+            <div class="flex h-48 items-center justify-center rounded-lg border border-white/20 text-center text-sm text-sky-100">
+              Animated supply-chain graphic placeholder
+            </div>
+            <p class="mt-4 text-sm text-sky-100">
+              Senior Executive Logistics • SEZ Specialist • Trade Compliance Strategist
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
 
-      {/* ABOUT */}
-      <section id="about" className="max-w-6xl mx-auto p-8">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
-          <div className="md:col-span-2">
-            <h2 className="text-2xl font-semibold">About</h2>
-            <p className="mt-3 text-gray-700">Logistics and supply chain professional with 15+ years in procurement, export-import, warehousing, and transport. Expertise in SEZ/bonded zone compliance, customs processes (BC2.5–BC4.0), INSW & Ceisa systems, and ERP-driven operations. Passionate about driving efficiency, compliance, and digital transformation across end-to-end supply chains.</p>
-            <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li className="text-sm">📍 Karawang, West Java</li>
-              <li className="text-sm">📧 dodihariyanto580@gmail.com</li>
-              <li className="text-sm">🔗 <a className="text-sky-600" href="https://www.linkedin.com/in/dodi-120251196/">LinkedIn</a></li>
-            </ul>
+    <main>
+      <section id="about" class="mx-auto max-w-6xl px-6 py-16">
+        <div class="grid gap-10 md:grid-cols-3 md:items-start">
+          <div class="md:col-span-2">
+            <h2 class="text-3xl font-semibold">About</h2>
+            <p class="mt-4 text-slate-700">
+              Logistics and supply chain professional with 15+ years in procurement, export-import, warehousing, and transport. Expertise in SEZ and bonded
+              zone compliance, customs processes (BC2.5–BC4.0), INSW &amp; Ceisa systems, and ERP-driven operations. Passionate about driving efficiency,
+              compliance, and digital transformation across end-to-end supply chains.
+            </p>
+            <dl class="mt-6 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
+              <div>
+                <dt class="font-semibold text-slate-600">Location</dt>
+                <dd class="text-slate-800">Karawang, West Java</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-600">Email</dt>
+                <dd>
+                  <a class="text-sky-600 hover:underline" href="mailto:dodihariyanto580@gmail.com">dodihariyanto580@gmail.com</a>
+                </dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-slate-600">LinkedIn</dt>
+                <dd>
+                  <a class="text-sky-600 hover:underline" href="https://www.linkedin.com/in/dodi-120251196/" target="_blank" rel="noreferrer">@dodi-120251196</a>
+                </dd>
+              </div>
+            </dl>
           </div>
           <div>
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-medium">Quick Stats</h3>
-              <div className="mt-3 space-y-2 text-sm">
-                <div>Years experience: <strong>15+</strong></div>
-                <div>SEZ projects: <strong>Multiple</strong></div>
-                <div>Certified: <strong>IATA DG, MISCM, Lean SS YB</strong></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EXPERIENCE */}
-      <section id="experience" className="bg-white/60 py-12">
-        <div className="max-w-6xl mx-auto p-8">
-          <h2 className="text-2xl font-semibold">Experience</h2>
-          <div className="mt-6 space-y-6">
-            {experiences.map((exp) => (
-              <div key={exp.company} className="p-6 border rounded-lg bg-white shadow-sm">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold">{exp.role}</h3>
-                    <div className="text-sm text-slate-600">{exp.company} • {exp.period}</div>
-                  </div>
-                  <div className="text-xs text-slate-500">View case study →</div>
+            <div class="rounded-lg bg-white p-6 shadow">
+              <h3 class="text-lg font-semibold">Quick Stats</h3>
+              <dl class="mt-4 space-y-3 text-sm text-slate-700">
+                <div class="flex items-center justify-between">
+                  <dt>Years experience</dt>
+                  <dd class="font-semibold">15+</dd>
                 </div>
-                <ul className="mt-4 list-disc pl-5 text-sm text-slate-700">
-                  {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
-                </ul>
-              </div>
-            ))}
+                <div class="flex items-center justify-between">
+                  <dt>SEZ projects</dt>
+                  <dd class="font-semibold">Multiple</dd>
+                </div>
+                <div class="flex items-center justify-between">
+                  <dt>Certifications</dt>
+                  <dd class="text-right">IATA DG, MISCM, Lean SS YB</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SKILLS & DASHBOARD */}
-      <section id="skills" className="max-w-6xl mx-auto p-8">
-        <h2 className="text-2xl font-semibold">Skills & Tools</h2>
-        <div className="mt-6 grid md:grid-cols-3 gap-6">
-          <div className="col-span-2 p-6 bg-white rounded-lg shadow">
-            <h4 className="font-medium">Core Competencies</h4>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {skills.map((s) => (
-                <span key={s} className="px-3 py-1 rounded-full border text-sm">{s}</span>
-              ))}
+      <section id="experience" class="bg-white/70 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <h2 class="text-3xl font-semibold">Experience</h2>
+          <div class="mt-8 space-y-6">
+            <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Operations &amp; Supply Chain Manager</h3>
+                  <p class="text-sm text-slate-600">PT Beurer Indonesia Technology (SEZ Kendal) • Aug 2024 — Jul 2025</p>
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-widest text-sky-600">Case study coming soon</span>
+              </div>
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700">
+                <li>Directed end-to-end SEZ logistics strategy encompassing import-export, bonded warehousing, procurement, and 3PL partnerships.</li>
+                <li>Governed customs &amp; SEZ compliance across BC2.5–BC4.0, INSW, PPKEK, and PJKEK processes.</li>
+                <li>Established SOPs, KPI frameworks, and continuous improvement initiatives to elevate on-time performance.</li>
+              </ul>
+            </article>
+
+            <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Logistic Manager</h3>
+                  <p class="text-sm text-slate-600">PT LBM Energi Baru Indonesia (SEZ Kendal) • Jun 2023 — Aug 2024</p>
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-widest text-sky-600">Case study coming soon</span>
+              </div>
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700">
+                <li>Aligned procurement and SEZ logistics execution to optimize tax exposure and throughput.</li>
+                <li>Implemented supplier performance metrics and inventory optimization programs.</li>
+              </ul>
+            </article>
+
+            <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-semibold">Productions &amp; Logistic Manager</h3>
+                  <p class="text-sm text-slate-600">PT Taka Turbomachinery Indonesia (Contract Project) • Nov 2021 — Jun 2022</p>
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-widest text-sky-600">Case study coming soon</span>
+              </div>
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700">
+                <li>Managed export-import logistics and heavy cargo compliance for complex project deliveries.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="mx-auto max-w-6xl px-6 py-16">
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="md:col-span-2 rounded-lg bg-white p-6 shadow">
+            <h2 class="text-3xl font-semibold">Skills &amp; Tools</h2>
+            <h3 class="mt-6 text-sm font-semibold uppercase tracking-wide text-slate-500">Core Competencies</h3>
+            <div class="mt-4 flex flex-wrap gap-3 text-sm">
+              <span class="rounded-full border border-slate-200 px-3 py-1">SEZ &amp; Bonded Zone Compliance</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1">Customs Clearance (INSW, Ceisa)</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1">Procurement &amp; Supplier Management</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1">Warehouse Optimization</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1">ERP: Odoo, SAP</span>
+              <span class="rounded-full border border-slate-200 px-3 py-1">Budgeting &amp; Import TAX Calculation</span>
             </div>
-            <div className="mt-6">
-              {/* Placeholder for interactive radar / bubble chart - implement with recharts or chartjs */}
-              <div className="h-48 flex items-center justify-center border rounded">[Interactive skill chart]</div>
+            <div class="mt-8">
+              <div class="flex h-48 items-center justify-center rounded border border-dashed border-slate-300 bg-slate-50 text-center text-sm text-slate-500">
+                Interactive skill chart placeholder (implement with Recharts / Chart.js)
+              </div>
             </div>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow">
-            <h4 className="font-medium">Certifications</h4>
-            <ul className="mt-3 text-sm space-y-2">
+          <div class="rounded-lg bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold">Certifications</h3>
+            <ul class="mt-4 space-y-3 text-sm text-slate-700">
               <li>IATA Dangerous Goods Handling (valid until 2027)</li>
               <li>Mastering International Supply Chain Management (MISCM)</li>
               <li>Lean Six Sigma Yellow Belt</li>
-              <li>ISO 9001 & ISO 13485 Auditor</li>
+              <li>ISO 9001 &amp; ISO 13485 Auditor</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* PROJECTS / CASE STUDIES */}
-      <section id="portfolio" className="bg-slate-50 py-12">
-        <div className="max-w-6xl mx-auto p-8">
-          <h2 className="text-2xl font-semibold">Projects & Case Studies</h2>
-          <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <article className="p-6 bg-white rounded-lg shadow">
-              <h3 className="font-medium">SEZ Logistics Compliance & Tax Optimization</h3>
-              <p className="mt-2 text-sm text-slate-700">Mini case: how IT Inventory Permit & regulatory alignment reduced import tax exposure and improved throughput for SEZ operations.</p>
-              <div className="mt-4 text-xs text-sky-600">View interactive report →</div>
+      <section id="portfolio" class="bg-slate-100 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <h2 class="text-3xl font-semibold">Projects &amp; Case Studies</h2>
+          <div class="mt-8 grid gap-6 md:grid-cols-2">
+            <article class="rounded-lg bg-white p-6 shadow">
+              <h3 class="text-lg font-semibold">SEZ Logistics Compliance &amp; Tax Optimization</h3>
+              <p class="mt-3 text-sm text-slate-700">
+                Mini case: how IT Inventory Permit and regulatory alignment reduced import tax exposure while improving throughput for SEZ operations.
+              </p>
+              <a class="mt-4 inline-flex items-center text-xs font-semibold uppercase tracking-widest text-sky-600" href="#contact">
+                View interactive report →
+              </a>
             </article>
-
-            <article className="p-6 bg-white rounded-lg shadow">
-              <h3 className="font-medium">Lithium Battery Import Cost-Saving Project</h3>
-              <p className="mt-2 text-sm text-slate-700">Overview of project that achieved measurable import cost savings through supplier negotiation and classification strategy.</p>
-              <div className="mt-4 text-xs text-sky-600">View details →</div>
+            <article class="rounded-lg bg-white p-6 shadow">
+              <h3 class="text-lg font-semibold">Lithium Battery Import Cost-Saving Project</h3>
+              <p class="mt-3 text-sm text-slate-700">
+                Overview of negotiations and HS classification strategy that delivered measurable import cost savings and supply continuity.
+              </p>
+              <a class="mt-4 inline-flex items-center text-xs font-semibold uppercase tracking-widest text-sky-600" href="#contact">
+                View details →
+              </a>
             </article>
           </div>
         </div>
       </section>
+    </main>
 
-      {/* CONTACT */}
-      <footer id="contact" className="bg-slate-900 text-white py-12">
-        <div className="max-w-6xl mx-auto p-8 grid md:grid-cols-3 gap-6">
-          <div className="md:col-span-2">
-            <h4 className="text-xl font-semibold">Let's connect</h4>
-            <p className="mt-2 text-sm">Interested in collaborating or discussing supply chain transformation? Reach out via LinkedIn or email.</p>
-            <div className="mt-4">
-              <a className="inline-block mr-3" href="https://www.linkedin.com/in/dodi-120251196/">LinkedIn</a>
-              <a className="inline-block" href="mailto:dodihariyanto580@gmail.com">Email</a>
-            </div>
-          </div>
-          <div>
-            <form className="flex flex-col gap-3">
-              <input className="p-2 rounded text-black" placeholder="Your name" />
-              <input className="p-2 rounded text-black" placeholder="Email" />
-              <textarea className="p-2 rounded text-black" rows={3} placeholder="Message" />
-              <button className="bg-sky-600 text-white py-2 rounded">Send</button>
-            </form>
+    <footer id="contact" class="bg-slate-900 py-16 text-white">
+      <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-3">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-semibold">Let's connect</h2>
+          <p class="mt-4 text-sm text-slate-300">
+            Interested in collaborating or discussing supply chain transformation? Reach out via LinkedIn or send a message using the form.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-4 text-sm">
+            <a class="hover:text-sky-400" href="https://www.linkedin.com/in/dodi-120251196/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="hover:text-sky-400" href="mailto:dodihariyanto580@gmail.com">Email</a>
           </div>
         </div>
-        <div className="text-center text-sm text-slate-400 mt-6">© {new Date().getFullYear()} Dodi Hariyanto — Portfolio</div>
-      </footer>
-    </div>
-  )
-}
+        <form class="flex flex-col gap-3">
+          <label class="text-sm" for="name">
+            <span class="block text-slate-300">Your name</span>
+            <input id="name" class="mt-1 w-full rounded bg-white/10 px-3 py-2 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500" type="text" placeholder="Jane Doe" />
+          </label>
+          <label class="text-sm" for="email">
+            <span class="block text-slate-300">Email</span>
+            <input id="email" class="mt-1 w-full rounded bg-white/10 px-3 py-2 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500" type="email" placeholder="you@example.com" />
+          </label>
+          <label class="text-sm" for="message">
+            <span class="block text-slate-300">Message</span>
+            <textarea id="message" rows="3" class="mt-1 w-full rounded bg-white/10 px-3 py-2 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Let's discuss SEZ logistics..."></textarea>
+          </label>
+          <button
+            class="mt-2 inline-flex items-center justify-center rounded bg-sky-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-300"
+            type="button"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
+      <p class="mt-12 text-center text-xs text-slate-500">
+        © <span id="copyright-year"></span> Dodi Hariyanto — Portfolio
+      </p>
+    </footer>
 
-/*
-README / Next steps (place in project root as README.md):
-
-1) Create project and install dependencies
-   npx create-next-app@latest dodi-portfolio
-   cd dodi-portfolio
-   npm install
-
-2) Install Tailwind CSS (official):
-   npm install -D tailwindcss postcss autoprefixer
-   npx tailwindcss init -p
-
-   Configure tailwind.config.js and globals.css per Tailwind docs.
-
-3) Add the pages/index.jsx content (this file) to pages/index.jsx
-   Add globals.css to styles/ and import in pages/_app.js
-
-4) Add Resume_Dodi_Hariyanto.pdf to /public
-
-5) Run locally:
-   npm run dev
-
-6) Push to GitHub and connect to Vercel for automatic deployment.
-
-Optional libraries to implement interactive pieces:
-- recharts or chart.js for radar/bubble charts
-- framer-motion for animations
-- lottie-react for animated supply-chain clips
-- three.js + react-three-fiber for 3D globe
-
-Folder suggestion before push:
-- pages/
-  - index.jsx
-  - _app.jsx
-- public/Resume_Dodi_Hariyanto.pdf
-- styles/globals.css
-- tailwind.config.js
-- package.json
-
-
-*/
+    <script>
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
